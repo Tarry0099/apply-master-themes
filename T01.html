@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#e7e6e2;font-family:'EB Garamond',Georgia,serif;color:#161513;-webkit-font-smoothing:antialiased}
+.wrap{display:flex;flex-direction:column;align-items:center;gap:32px;padding:40px 16px}
+.page{width:210mm;min-height:297mm;background:#fdfdfb;box-shadow:0 6px 30px rgba(0,0,0,.14);padding:24mm 22mm;box-sizing:border-box}
+.cv-head{text-align:center;padding-bottom:14px;border-bottom:1.5px solid #161513}
+.cv-name{font-size:34px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.cv-role{font-size:16px;font-style:italic;color:#56524b;margin-top:6px;letter-spacing:.02em}
+.cv-contact{font-size:13.5px;color:#3a382f;margin-top:12px;letter-spacing:.02em}
+.cv-contact span{padding:0 9px;border-left:1px solid #b9b5ab}
+.cv-contact span:first-child{border-left:none;padding-left:0}
+.sec{margin-top:19px}
+.sec-h{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:#161513;padding-bottom:5px;border-bottom:1px solid #c9c5ba;margin-bottom:12px}
+.entry{margin-bottom:15px}
+.entry-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.entry-title{font-size:16px;font-weight:600}
+.entry-date{font-size:13px;font-style:italic;color:#6a665d;white-space:nowrap}
+.entry-org{font-size:14.5px;font-style:italic;color:#46443c;margin-top:1px}
+.entry ul{margin:7px 0 0 18px}
+.entry li{font-size:14px;line-height:1.5;color:#2c2a24;margin-bottom:3px}
+.pd{display:grid;grid-template-columns:max-content 1fr;gap:5px 18px;font-size:14.5px;line-height:1.5}
+.pd dt{color:#6a665d}
+.pd dd{color:#1c1b17}
+.lang-row{display:flex;justify-content:space-between;font-size:14.5px;line-height:1.9;border-bottom:1px dotted #d6d2c7;padding-bottom:2px}
+.lang-row span:last-child{color:#56524b;font-style:italic}
+.skills-list{font-size:14.5px;line-height:1.85;color:#2c2a24}
+/* letter */
+.lt-sender{font-size:12px;color:#56524b;letter-spacing:.02em;border-bottom:.75px solid #c9c5ba;padding-bottom:6px}
+.lt-blocks{display:flex;justify-content:space-between;margin-top:34px;gap:24px}
+.lt-recip{font-size:14.5px;line-height:1.55}
+.lt-recip .muted{color:#6a665d;font-style:italic;margin-bottom:4px}
+.lt-date{font-size:14px;text-align:right;white-space:nowrap}
+.lt-subj{font-size:15.5px;font-weight:600;margin-top:40px}
+.lt-body{font-size:14.5px;line-height:1.72;color:#1f1e19;margin-top:20px}
+.lt-body p{margin-bottom:14px;text-align:justify}
+.lt-greet{margin-top:6px}
+.lt-sign{margin-top:26px;font-size:14.5px}
+.lt-name{font-weight:600;margin-top:2px}
+@media print{body{background:none}.wrap{padding:0;gap:0}.page{box-shadow:none;width:auto;min-height:auto}@page{size:A4;margin:0}.page+.page{page-break-before:always}}
+</style></helmet><div class="wrap"><div class="page"><div class="cv-head"><div class="cv-name">Vor- und Nachname</div><div class="cv-role">Berufsbezeichnung</div><div class="cv-contact"><span>Stadt, Deutschland</span><span>Telefonnummer</span><span>E-Mail-Adresse</span></div></div><div class="sec"><div class="sec-h">Persönliche Daten</div><dl class="pd"><dt>Geburtsdatum</dt><dd>TT.MM.JJJJ</dd><dt>Geburtsort</dt><dd>Geburtsort, Land</dd><dt>Staatsangehörigkeit</dt><dd>Staatsangehörigkeit</dd><dt>Familienstand</dt><dd>Familienstand</dd></dl></div><div class="sec"><div class="sec-h">Berufserfahrung</div><div class="entry"><div class="entry-top"><div class="entry-title">Position / Jobtitel</div><div class="entry-date">MM/JJJJ – MM/JJJJ</div></div><div class="entry-org">Unternehmen, Ort</div><ul><li>Verantwortung für einen definierten Aufgabenbereich mit Fokus auf Qualität und Effizienz.</li><li>Zusammenarbeit mit interdisziplinären Teams zur Erreichung gemeinsamer Projektziele.</li><li>Optimierung bestehender Abläufe und Einführung neuer Arbeitsprozesse.</li></ul></div><div class="entry"><div class="entry-top"><div class="entry-title">Position / Jobtitel</div><div class="entry-date">MM/JJJJ – MM/JJJJ</div></div><div class="entry-org">Unternehmen, Ort</div><ul><li>Eigenverantwortliche Bearbeitung von Projekten von der Planung bis zum Abschluss.</li><li>Betreuung von Kunden und Pflege langfristiger Geschäftsbeziehungen.</li></ul></div></div><div class="sec"><div class="sec-h">Ausbildung</div><div class="entry"><div class="entry-top"><div class="entry-title">Abschluss / Studiengang</div><div class="entry-date">MM/JJJJ – MM/JJJJ</div></div><div class="entry-org">Hochschule / Institution, Ort</div></div><div class="entry"><div class="entry-top"><div class="entry-title">Abschluss / Schulbildung</div><div class="entry-date">MM/JJJJ – MM/JJJJ</div></div><div class="entry-org">Institution, Ort</div></div></div><div class="sec"><div class="sec-h">Kenntnisse / Fähigkeiten</div><div class="skills-list">Fachkenntnis 1  ·  Fachkenntnis 2  ·  Fachkenntnis 3  ·  Software / Tool  ·  Methodik  ·  Weitere Fähigkeit</div></div><div class="sec"><div class="sec-h">Sprachen</div><div class="lang-row"><span>Muttersprache</span><span>Muttersprachliches Niveau</span></div><div class="lang-row"><span>Deutsch</span><span>Niveau (z. B. B2)</span></div><div class="lang-row"><span>Englisch</span><span>Niveau (z. B. C1)</span></div></div></div><div class="page"><div class="lt-sender">Vor- und Nachname  ·  Straße und Hausnummer  ·  PLZ Stadt  ·  Telefonnummer  ·  E-Mail-Adresse</div><div class="lt-blocks"><div class="lt-recip"><div class="muted">Empfänger</div>Unternehmen<br>Ansprechpartner / Abteilung<br>Straße und Hausnummer<br>PLZ Stadt</div><div class="lt-date">Stadt, den TT.MM.JJJJ</div></div><div class="lt-subj">Bewerbung als Berufsbezeichnung</div><div class="lt-body"><div class="lt-greet">Sehr geehrte Damen und Herren,</div><p>mit großem Interesse habe ich Ihre Stellenanzeige für die Position als Berufsbezeichnung gelesen. Die ausgeschriebenen Aufgaben entsprechen genau meinen beruflichen Interessen und Qualifikationen, weshalb ich mich gerne bei Ihnen bewerbe.</p><p>In meiner bisherigen Tätigkeit bei einem vergleichbaren Unternehmen konnte ich umfangreiche Erfahrungen in meinem Fachbereich sammeln. Dabei habe ich relevante Fähigkeiten erfolgreich eingesetzt und messbare Ergebnisse erzielt, die zum Erfolg meines Teams beigetragen haben.</p><p>Meine Stärken liegen in einer strukturierten, teamorientierten und lösungsorientierten Arbeitsweise. Eine neue berufliche Herausforderung in Ihrem Unternehmen würde ich mit großem Engagement und hoher Eigenmotivation angehen.</p><p>Über die Einladung zu einem persönlichen Gespräch freue ich mich sehr. Mein frühestmöglicher Eintrittstermin ist der TT.MM.JJJJ, meine Gehaltsvorstellung liegt bei Betrag brutto pro Jahr.</p></div><div class="lt-sign">Mit freundlichen Grüßen<div class="lt-name">Vor- und Nachname</div></div></div></div>
+</x-dc>
+</body>
+</html>

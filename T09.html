@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#e7e8ea;font-family:'IBM Plex Sans',Arial,sans-serif;color:#23282d;-webkit-font-smoothing:antialiased}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{display:flex;flex-direction:column;align-items:center;gap:32px;padding:40px 16px}
+.page{width:210mm;min-height:297mm;background:#fff;box-shadow:0 6px 30px rgba(0,0,0,.13);padding:18mm 18mm;box-sizing:border-box;display:flex;flex-direction:column}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding-bottom:13px;border-bottom:2px solid #23282d}
+.name{font-size:32px;font-weight:600;letter-spacing:-.02em;line-height:1}
+.role{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#46618a;margin-top:8px;letter-spacing:.02em}
+.contact{font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.7;color:#5a636b;text-align:right}
+.sec{margin-top:18px}
+.sec-h{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.sec-h .no{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:#46618a}
+.sec-h .tt{font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:#23282d}
+.sec-h::after{content:"";flex:1;height:1px;background:#e1e4e7}
+.lead{font-size:13.5px;line-height:1.62;color:#454c52}
+.entry{margin-bottom:13px}
+.entry:last-child{margin-bottom:0}
+.e-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.e-title{font-size:14.5px;font-weight:600}
+.e-date{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#46618a;white-space:nowrap}
+.e-org{font-size:12.5px;color:#79828a;margin:1px 0 5px}
+.entry ul{margin-left:16px}
+.entry li{font-size:13px;line-height:1.5;color:#454c52;margin-bottom:2px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pd{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.75}
+.pd b{color:#79828a;font-weight:500}
+.skills{display:flex;flex-direction:column;gap:7px}
+.sk{display:flex;align-items:center;gap:10px;font-size:12.5px}
+.sk .bar{flex:1;height:4px;background:#e8ebee}
+.sk .bar i{display:block;height:100%;background:#46618a}
+.langs{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.9}
+.langs span{color:#46618a}
+/* letter */
+.lt-wrap{flex:1;display:flex;flex-direction:column}
+.lt-recip{font-size:13.5px;line-height:1.55;margin-top:20px}
+.lt-recip .mut{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#46618a;margin-bottom:5px}
+.lt-date{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#79828a;margin-top:20px;text-align:right}
+.lt-subj{font-size:16px;font-weight:600;margin-top:26px}
+.lt-body{font-size:13.5px;line-height:1.74;color:#3a4147;margin-top:16px}
+.lt-body p{margin-bottom:13px;text-align:justify}
+.lt-sign{margin-top:auto;padding-top:22px;font-size:13.5px}
+.lt-name{font-weight:600;color:#46618a;margin-top:3px}
+@media print{body{background:none}.wrap{padding:0;gap:0}.page{box-shadow:none;width:auto;min-height:auto}@page{size:A4;margin:0}.page+.page{page-break-before:always}.sk .bar i{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></helmet><div class="wrap"><div class="page"><div class="hd"><div><div class="name">Vor- und Nachname</div><div class="role">// Berufsbezeichnung</div></div><div class="contact">Stadt, Deutschland<br>Telefonnummer<br>E-Mail-Adresse</div></div><div class="sec"><div class="sec-h"><span class="no">01</span><span class="tt">Profil</span></div><div class="lead">Kurzes Profil mit zwei bis drei Sätzen über die eigene Berufserfahrung, fachliche Schwerpunkte und berufliche Ziele. Dieser neutrale Platzhaltertext wird später durch individuelle Inhalte ersetzt.</div></div><div class="sec"><div class="sec-h"><span class="no">02</span><span class="tt">Berufserfahrung</span></div><div class="entry"><div class="e-top"><div class="e-title">Position / Jobtitel</div><div class="e-date">MM/JJJJ–MM/JJJJ</div></div><div class="e-org">Unternehmen, Ort</div><ul><li>Verantwortung für einen definierten Aufgabenbereich mit Fokus auf Qualität und Effizienz.</li><li>Zusammenarbeit mit interdisziplinären Teams zur Erreichung gemeinsamer Projektziele.</li><li>Optimierung bestehender Abläufe und Einführung neuer Arbeitsprozesse.</li></ul></div><div class="entry"><div class="e-top"><div class="e-title">Position / Jobtitel</div><div class="e-date">MM/JJJJ–MM/JJJJ</div></div><div class="e-org">Unternehmen, Ort</div><ul><li>Eigenverantwortliche Bearbeitung von Projekten von der Planung bis zum Abschluss.</li><li>Betreuung von Kunden und Pflege langfristiger Geschäftsbeziehungen.</li></ul></div></div><div class="sec"><div class="sec-h"><span class="no">03</span><span class="tt">Ausbildung</span></div><div class="entry"><div class="e-top"><div class="e-title">Abschluss / Studiengang</div><div class="e-date">MM/JJJJ–MM/JJJJ</div></div><div class="e-org">Hochschule / Institution, Ort</div></div><div class="entry"><div class="e-top"><div class="e-title">Abschluss / Schulbildung</div><div class="e-date">MM/JJJJ–MM/JJJJ</div></div><div class="e-org">Institution, Ort</div></div></div><div class="cols"><div class="sec"><div class="sec-h"><span class="no">04</span><span class="tt">Skills</span></div><div class="skills"><div class="sk"><span>Fachkenntnis 1</span><span class="bar"><i style="width:90%"></i></span></div><div class="sk"><span>Fachkenntnis 2</span><span class="bar"><i style="width:80%"></i></span></div><div class="sk"><span>Software / Tool</span><span class="bar"><i style="width:75%"></i></span></div><div class="sk"><span>Methodik</span><span class="bar"><i style="width:65%"></i></span></div></div></div><div class="sec"><div class="sec-h"><span class="no">05</span><span class="tt">Sprachen</span></div><div class="langs">Muttersprache <span>Muttersprache</span><br>Deutsch <span>B2</span><br>Englisch <span>C1</span></div><div class="sec-h" style="margin-top:14px"><span class="no">06</span><span class="tt">Daten</span></div><div class="pd"><b>geb.</b> TT.MM.JJJJ<br><b>ort</b> Geburtsort, Land<br><b>nat.</b> Staatsangehörigkeit</div></div></div></div><div class="page"><div class="lt-wrap"><div class="hd"><div><div class="name">Vor- und Nachname</div><div class="role">// Berufsbezeichnung</div></div><div class="contact">Straße und Hausnummer<br>PLZ Stadt<br>Telefonnummer · E-Mail-Adresse</div></div><div class="lt-recip"><div class="mut">// Empfänger</div>Unternehmen<br>Ansprechpartner / Abteilung<br>Straße und Hausnummer<br>PLZ Stadt</div><div class="lt-date">Stadt, den TT.MM.JJJJ</div><div class="lt-subj">Bewerbung als Berufsbezeichnung</div><div class="lt-body"><p>Sehr geehrte Damen und Herren,</p><p>mit großem Interesse habe ich Ihre Stellenanzeige für die Position als Berufsbezeichnung gelesen. Die ausgeschriebenen Aufgaben entsprechen genau meinen beruflichen Interessen und Qualifikationen, weshalb ich mich gerne bei Ihnen bewerbe.</p><p>In meiner bisherigen Tätigkeit konnte ich umfangreiche Erfahrungen in meinem Fachbereich sammeln. Dabei habe ich relevante Fähigkeiten erfolgreich eingesetzt und messbare Ergebnisse erzielt, die zum Erfolg meines Teams beigetragen haben.</p><p>Meine Stärken liegen in einer strukturierten, teamorientierten und lösungsorientierten Arbeitsweise. Eine neue berufliche Herausforderung in Ihrem Unternehmen würde ich mit großem Engagement angehen.</p><p>Über die Einladung zu einem persönlichen Gespräch freue ich mich sehr. Mein frühestmöglicher Eintrittstermin ist der TT.MM.JJJJ, meine Gehaltsvorstellung liegt bei Betrag brutto pro Jahr.</p></div><div class="lt-sign">Mit freundlichen Grüßen<div class="lt-name">Vor- und Nachname</div></div></div></div></div>
+</x-dc>
+</body>
+</html>

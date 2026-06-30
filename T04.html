@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#eae8e7;font-family:'Libre Franklin',Helvetica,Arial,sans-serif;color:#26221f;-webkit-font-smoothing:antialiased}
+.wrap{display:flex;flex-direction:column;align-items:center;gap:32px;padding:40px 16px}
+.page{width:210mm;min-height:297mm;background:#fff;box-shadow:0 6px 30px rgba(0,0,0,.13);padding:20mm 20mm;box-sizing:border-box;display:flex;flex-direction:column}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:16px;border-bottom:2px solid #8a3b46}
+.hd-l .name{font-size:33px;font-weight:700;letter-spacing:-.01em;line-height:1.05}
+.hd-l .role{font-size:15px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#8a3b46;margin-top:6px}
+.hd-l .contact{display:flex;flex-wrap:wrap;gap:4px 20px;font-size:12.5px;color:#5c5651;margin-top:12px}
+.photo{width:92px;height:92px;flex:none;border-radius:6px;background:repeating-linear-gradient(45deg,#efe7e8,#efe7e8 7px,#e6dadb 7px,#e6dadb 14px);border:1px solid #d8c4c7;display:flex;align-items:center;justify-content:center;font-size:10px;letter-spacing:.16em;color:#a87f86;font-weight:600}
+.sec{margin-top:22px}
+.sec-h{display:flex;align-items:center;gap:9px;color:#8a3b46;margin-bottom:13px}
+.sec-h svg{width:17px;height:17px;flex:none}
+.sec-h span{font-size:13.5px;font-weight:700;text-transform:uppercase;letter-spacing:.14em}
+.sec-h::after{content:"";flex:1;height:1px;background:#ead9db}
+.lead{font-size:14px;line-height:1.65;color:#46413c}
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:7px 30px}
+.pd div{font-size:13.5px}
+.pd .k{font-weight:600;color:#8a3b46;font-size:11px;text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:1px}
+.entry{margin-bottom:15px}
+.entry:last-child{margin-bottom:0}
+.e-top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.e-title{font-size:15px;font-weight:600}
+.e-date{font-size:12px;font-weight:600;color:#8a3b46;white-space:nowrap;background:#f7eef0;padding:2px 9px;border-radius:3px}
+.e-org{font-size:13px;color:#6e665f;font-weight:500;margin:2px 0 5px}
+.entry ul{margin-left:17px}
+.entry li{font-size:13.5px;line-height:1.55;color:#46413c;margin-bottom:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:12.5px;font-weight:500;color:#7a323c;background:#f7eef0;border:1px solid #ecd6da;border-radius:20px;padding:4px 13px}
+.langs{display:flex;flex-wrap:wrap;gap:8px 40px}
+.lang{font-size:13.5px}
+.lang b{font-weight:600}
+.lang em{font-style:normal;color:#8a3b46;margin-left:8px;font-weight:500}
+/* letter */
+.lt-recip{font-size:13.5px;line-height:1.55;margin-top:20px}
+.lt-recip .mut{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:#8a3b46;margin-bottom:5px}
+.lt-date{font-size:13px;color:#6e665f;margin-top:22px;text-align:right}
+.lt-subj{font-size:16px;font-weight:700;margin-top:28px}
+.lt-body{font-size:13.8px;line-height:1.74;color:#3c3733;margin-top:16px}
+.lt-body p{margin-bottom:13px;text-align:justify}
+.lt-sign{margin-top:auto;padding-top:24px;font-size:13.8px}
+.lt-name{font-weight:700;color:#8a3b46;margin-top:3px}
+@media print{body{background:none}.wrap{padding:0;gap:0}.page{box-shadow:none;width:auto;min-height:auto}@page{size:A4;margin:0}.page+.page{page-break-before:always}.e-date,.chip,.photo{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style></helmet><div class="wrap"><div class="page"><div class="hd"><div class="hd-l"><div class="name">Vor- und Nachname</div><div class="role">Berufsbezeichnung</div><div class="contact"><span>Stadt, Deutschland</span><span>Telefonnummer</span><span>E-Mail-Adresse</span></div></div><div class="photo">FOTO</div></div><div class="sec"><div class="sec-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Persönliche Daten</span></div><div class="pd"><div><span class="k">Geburtsdatum</span>TT.MM.JJJJ</div><div><span class="k">Geburtsort</span>Geburtsort, Land</div><div><span class="k">Staatsangehörigkeit</span>Staatsangehörigkeit</div><div><span class="k">Familienstand</span>Familienstand</div></div></div><div class="sec"><div class="sec-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg><span>Berufserfahrung</span></div><div class="entry"><div class="e-top"><div class="e-title">Position / Jobtitel</div><div class="e-date">MM/JJJJ – MM/JJJJ</div></div><div class="e-org">Unternehmen, Ort</div><ul><li>Verantwortung für einen definierten Aufgabenbereich mit Fokus auf Qualität und Effizienz.</li><li>Zusammenarbeit mit interdisziplinären Teams zur Erreichung gemeinsamer Projektziele.</li><li>Optimierung bestehender Abläufe und Einführung neuer Arbeitsprozesse.</li></ul></div><div class="entry"><div class="e-top"><div class="e-title">Position / Jobtitel</div><div class="e-date">MM/JJJJ – MM/JJJJ</div></div><div class="e-org">Unternehmen, Ort</div><ul><li>Eigenverantwortliche Bearbeitung von Projekten von der Planung bis zum Abschluss.</li><li>Betreuung von Kunden und Pflege langfristiger Geschäftsbeziehungen.</li></ul></div></div><div class="sec"><div class="sec-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span>Ausbildung</span></div><div class="entry"><div class="e-top"><div class="e-title">Abschluss / Studiengang</div><div class="e-date">MM/JJJJ – MM/JJJJ</div></div><div class="e-org">Hochschule / Institution, Ort</div></div><div class="entry"><div class="e-top"><div class="e-title">Abschluss / Schulbildung</div><div class="e-date">MM/JJJJ – MM/JJJJ</div></div><div class="e-org">Institution, Ort</div></div></div><div class="sec"><div class="sec-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Kenntnisse / Fähigkeiten</span></div><div class="chips"><span class="chip">Fachkenntnis 1</span><span class="chip">Fachkenntnis 2</span><span class="chip">Fachkenntnis 3</span><span class="chip">Software / Tool</span><span class="chip">Methodik</span><span class="chip">Weitere Fähigkeit</span></div></div><div class="sec"><div class="sec-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg><span>Sprachen</span></div><div class="langs"><div class="lang"><b>Muttersprache</b><em>Muttersprache</em></div><div class="lang"><b>Deutsch</b><em>B2</em></div><div class="lang"><b>Englisch</b><em>C1</em></div></div></div></div><div class="page"><div class="hd"><div class="hd-l"><div class="name">Vor- und Nachname</div><div class="role">Berufsbezeichnung</div><div class="contact"><span>Straße und Hausnummer, PLZ Stadt</span><span>Telefonnummer</span><span>E-Mail-Adresse</span></div></div><div class="photo">FOTO</div></div><div class="lt-recip"><div class="mut">Empfänger</div>Unternehmen<br>Ansprechpartner / Abteilung<br>Straße und Hausnummer<br>PLZ Stadt</div><div class="lt-date">Stadt, den TT.MM.JJJJ</div><div class="lt-subj">Bewerbung als Berufsbezeichnung</div><div class="lt-body"><p>Sehr geehrte Damen und Herren,</p><p>mit großem Interesse habe ich Ihre Stellenanzeige für die Position als Berufsbezeichnung gelesen. Die ausgeschriebenen Aufgaben entsprechen genau meinen beruflichen Interessen und Qualifikationen, weshalb ich mich gerne bei Ihnen bewerbe.</p><p>In meiner bisherigen Tätigkeit konnte ich umfangreiche Erfahrungen in meinem Fachbereich sammeln. Dabei habe ich relevante Fähigkeiten erfolgreich eingesetzt und messbare Ergebnisse erzielt, die zum Erfolg meines Teams beigetragen haben.</p><p>Meine Stärken liegen in einer strukturierten, teamorientierten und lösungsorientierten Arbeitsweise. Eine neue berufliche Herausforderung in Ihrem Unternehmen würde ich mit großem Engagement und hoher Eigenmotivation angehen.</p><p>Über die Einladung zu einem persönlichen Gespräch freue ich mich sehr. Mein frühestmöglicher Eintrittstermin ist der TT.MM.JJJJ, meine Gehaltsvorstellung liegt bei Betrag brutto pro Jahr.</p></div><div class="lt-sign">Mit freundlichen Grüßen<div class="lt-name">Vor- und Nachname</div></div></div></div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>انتخاب فرمت رزومه و آنشرایبن — Apply Master</title>
+<style>
+  :root{
+    --bg:#eef0f3; --card:#fff; --ink:#1d2330; --muted:#5b6472; --accent:#1f566a;
+    --line:#dfe3e9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Tahoma,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  .wrap{max-width:1200px;margin:0 auto;padding:20px 16px 60px}
+  header{text-align:center;padding:18px 14px;background:var(--card);border:1px solid var(--line);
+         border-radius:14px;margin-bottom:22px}
+  header h1{font-size:20px;color:var(--accent);margin-bottom:8px}
+  header p{font-size:14px;color:var(--muted);max-width:760px;margin:0 auto 6px}
+  .badge{display:inline-block;margin-top:8px;font-size:13px;border-radius:20px;padding:5px 14px}
+  .badge.ph{background:#eaf6ee;color:#1d7a3e;border:1px solid #bfe6cb}
+  .badge.no{background:#eef3f8;color:#1f566a;border:1px solid #cfe0ec}
+  .steps{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px;font-size:13px}
+  .steps span{background:#eef5f8;color:var(--accent);border:1px solid #d4e6ee;border-radius:20px;padding:5px 12px}
+  .sec-title{font-size:16px;color:var(--ink);margin:6px 4px 12px;font-weight:700;
+             border-right:4px solid var(--accent);padding-right:10px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-bottom:26px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+        cursor:pointer;transition:.15s;position:relative}
+  .card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.12);border-color:var(--accent)}
+  .thumb{position:relative;height:300px;overflow:hidden;background:#f4f4f2;border-bottom:1px solid var(--line)}
+  .thumb iframe{position:absolute;top:0;right:0;width:794px;height:1123px;border:0;
+                transform:scale(.276);transform-origin:top right;pointer-events:none}
+  .thumb .veil{position:absolute;inset:0}
+  .meta{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;gap:8px}
+  .tid{font-weight:700;font-size:16px;color:#fff;background:var(--accent);border-radius:8px;
+       padding:3px 10px;letter-spacing:.5px}
+  .tname{font-size:13px;color:var(--muted);direction:ltr;text-align:left}
+  .lb{position:fixed;inset:0;background:rgba(15,20,28,.86);display:none;z-index:50;overflow:auto;padding:16px}
+  .lb.open{display:block}
+  .lb-bar{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;
+          gap:12px;background:#11161e;border:1px solid #2a323d;border-radius:12px;padding:10px 14px;
+          margin:0 auto 14px;max-width:840px}
+  .lb-bar .big{font-size:22px;font-weight:700;color:#fff;background:var(--accent);
+               border-radius:10px;padding:6px 16px;letter-spacing:1px}
+  .lb-bar .nm{color:#c7cdd6;font-size:14px;direction:ltr}
+  .lb-bar .x{color:#fff;background:#39424f;border:0;border-radius:8px;padding:8px 14px;
+             font-size:15px;cursor:pointer;font-family:inherit}
+  .lb-bar .x:hover{background:#4a5563}
+  .lb-stage{max-width:840px;margin:0 auto;background:#fff;border-radius:10px;overflow:hidden}
+  .lb-stage iframe{width:100%;height:2280px;border:0;display:block}
+  .hint{text-align:center;color:#aeb6c0;font-size:13px;margin:10px auto 0;max-width:840px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🎨 انتخاب فرمت رزومه و آنشرایبن</h1>
+    <div id="lead"></div>
+    <div class="steps">
+      <span>۱) یک قالب را انتخاب کن</span>
+      <span>۲) شماره‌اش را یادداشت کن</span>
+      <span>۳) در ربات همان شماره را وارد کن</span>
+    </div>
+  </header>
+  <div id="content"></div>
+</div>
+
+<div class="lb" id="lb">
+  <div class="lb-bar">
+    <span class="big" id="lbId">T01</span>
+    <span class="nm" id="lbName"></span>
+    <button class="x" id="lbClose">✕ بستن</button>
+  </div>
+  <div class="lb-stage"><iframe id="lbFrame" title="preview"></iframe></div>
+  <p class="hint">این شماره را به خاطر بسپار و در ربات وارد کن.</p>
+</div>
+
+<script>
+const cat=new URLSearchParams(location.search).get('cat'); // 'photo' | 'nophoto' | null
+const lead=document.getElementById('lead');
+if(cat==='photo'){
+  lead.innerHTML='<p>چون در پروفایلت عکس داری، قالب‌های زیر برای تو مناسب‌اند (جای عکس دارند).</p>'+
+                 '<span class="badge ph">📸 رزومه‌های عکس‌دار</span>';
+}else if(cat==='nophoto'){
+  lead.innerHTML='<p>چون عکس نداری، این قالب‌ها بدون جای عکس طراحی شده‌اند و برای تو مرتب و تمیز در می‌آیند.</p>'+
+                 '<span class="badge no">🗂 رزومه‌های بدون عکس</span>';
+}else{
+  lead.innerHTML='<p>قالب‌ها در دو دسته‌اند: عکس‌دار و بدون عکس. هر کدام را پسندیدی، شماره‌اش را در ربات وارد کن.</p>';
+}
+
+function card(t){
+  const d=document.createElement('div'); d.className='card';
+  d.innerHTML='<div class="thumb"><iframe loading="lazy" src="'+t.file+'"></iframe><div class="veil"></div></div>'+
+              '<div class="meta"><span class="tid">'+t.id+'</span><span class="tname">'+t.name+'</span></div>';
+  d.addEventListener('click',()=>openLb(t));
+  return d;
+}
+function grid(list){
+  const g=document.createElement('div'); g.className='grid';
+  list.forEach(t=>g.appendChild(card(t)));
+  return g;
+}
+function section(title,list){
+  const c=document.getElementById('content');
+  if(title){ const h=document.createElement('div'); h.className='sec-title'; h.textContent=title; c.appendChild(h); }
+  c.appendChild(grid(list));
+}
+
+fetch('themes.json').then(r=>r.json()).then(themes=>{
+  const photo=themes.filter(t=>t.photo), nophoto=themes.filter(t=>!t.photo);
+  if(cat==='photo'){ section(null,photo); }
+  else if(cat==='nophoto'){ section(null,nophoto); }
+  else { section('📸 عکس‌دار',photo); section('🗂 بدون عکس',nophoto); }
+});
+
+const lb=document.getElementById('lb'), lbFrame=document.getElementById('lbFrame'),
+      lbId=document.getElementById('lbId'), lbName=document.getElementById('lbName');
+function openLb(t){
+  lbId.textContent=t.id; lbName.textContent=t.name; lbFrame.src=t.file;
+  lb.classList.add('open'); document.body.style.overflow='hidden';
+}
+function closeLb(){ lb.classList.remove('open'); lbFrame.src=''; document.body.style.overflow=''; }
+document.getElementById('lbClose').addEventListener('click',closeLb);
+lb.addEventListener('click',e=>{ if(e.target===lb) closeLb(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLb(); });
+</script>
+</body>
+</html>

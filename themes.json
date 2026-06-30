@@ -1,0 +1,122 @@
+﻿[
+    {
+        "id":  "T01",
+        "name":  "Klassisch",
+        "file":  "T01.html",
+        "photo":  false
+    },
+    {
+        "id":  "T02",
+        "name":  "Modern Sidebar",
+        "file":  "T02.html",
+        "photo":  true
+    },
+    {
+        "id":  "T03",
+        "name":  "Minimal Header",
+        "file":  "T03.html",
+        "photo":  false
+    },
+    {
+        "id":  "T04",
+        "name":  "Akzent",
+        "file":  "T04.html",
+        "photo":  true
+    },
+    {
+        "id":  "T05",
+        "name":  "Terrakotta Sidebar",
+        "file":  "T05.html",
+        "photo":  true
+    },
+    {
+        "id":  "T06",
+        "name":  "Timeline",
+        "file":  "T06.html",
+        "photo":  false
+    },
+    {
+        "id":  "T07",
+        "name":  "Split Header",
+        "file":  "T07.html",
+        "photo":  false
+    },
+    {
+        "id":  "T08",
+        "name":  "Elegant Serif",
+        "file":  "T08.html",
+        "photo":  true
+    },
+    {
+        "id":  "T09",
+        "name":  "Mono Tech",
+        "file":  "T09.html",
+        "photo":  false
+    },
+    {
+        "id":  "T10",
+        "name":  "Aubergine",
+        "file":  "T10.html",
+        "photo":  true
+    },
+    {
+        "id":  "T11",
+        "name":  "Waldgrün",
+        "file":  "T11.html",
+        "photo":  false
+    },
+    {
+        "id":  "T12",
+        "name":  "Banner Foto",
+        "file":  "T12.html",
+        "photo":  true
+    },
+    {
+        "id":  "T13",
+        "name":  "Karten",
+        "file":  "T13.html",
+        "photo":  false
+    },
+    {
+        "id":  "T14",
+        "name":  "Olive",
+        "file":  "T14.html",
+        "photo":  true
+    },
+    {
+        "id":  "T15",
+        "name":  "Creme Bronze",
+        "file":  "T15.html",
+        "photo":  true
+    },
+    {
+        "id":  "T16",
+        "name":  "Graphit Corporate",
+        "file":  "T16.html",
+        "photo":  false
+    },
+    {
+        "id":  "T17",
+        "name":  "Burgund Akzent",
+        "file":  "T17.html",
+        "photo":  true
+    },
+    {
+        "id":  "T18",
+        "name":  "Petrol Timeline",
+        "file":  "T18.html",
+        "photo":  true
+    },
+    {
+        "id":  "T19",
+        "name":  "Altrosa Minimal",
+        "file":  "T19.html",
+        "photo":  false
+    },
+    {
+        "id":  "T20",
+        "name":  "Marineblau Executive",
+        "file":  "T20.html",
+        "photo":  false
+    }
+]
